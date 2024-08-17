@@ -1,5 +1,8 @@
 from PyQt5.QtWidgets import QWidget
 from card import *
+from menu import *
+from data import *
+
 from app import App
 
 win_card = QWidget()
@@ -10,9 +13,11 @@ def set_card():
     win_card.move(0,0)
     win_card.setLayout(main_line)
 def set_menu():
-    win_menu.resize(1000,600)
+    win_menu.resize(800,600)
     win_menu.setWindowTitle("Memory Card")
     win_menu.move(0,0)
+    win_menu.setLayout(main_menu_line)
+
 def back_to_menu():
     win_card.hide()
     win_menu.show()
@@ -21,5 +26,5 @@ btn_menu.clicked.connect(back_to_menu)
 set_card()
 set_menu()
 
-win_card.show()
+win_menu.show()
 App.exec_()
