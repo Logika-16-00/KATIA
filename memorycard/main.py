@@ -1,5 +1,7 @@
 from cProfile import label
 from multiprocessing.connection import answer_challenge
+import select
+from tabnanny import check
 from PyQt5.QtWidgets import QWidget,QMessageBox
 from card import *
 from app import *
@@ -98,10 +100,20 @@ def show_res():
     if btn_ans.text() == "Відповісти":
         AnswersGroupBox.hide()
         ResGroupBox.show()
-        btn_ans.setText("Наступне питання")
+        # if selected_button:
+        #     if q.checked(selected_button.text):
+        #         lb_res.setText("Правильно")
+        #         lb_corect.setText(q.correct)
+        #     else:
+        #         lb_res.setText("Неправильно")
+        #         lb_corect.setText(q.correct)
+
+        # btn_ans.setText("Наступне питання")
+        # selected_button = RadioGroup,checkButton()
+        
     else:
         show_res()
-        show_q
+        show_q()
 def show_res():
     AnswersGroupBox.show()
     ResGroupBox.hide()
