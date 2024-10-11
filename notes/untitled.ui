@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>931</width>
-    <height>690</height>
+    <width>930</width>
+    <height>722</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_make">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -44,19 +44,20 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>0</y>
-      <width>241</width>
-      <height>51</height>
+      <y>10</y>
+      <width>421</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 0);</string>
+     <string notr="true">color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Список заміток</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="list_1">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -66,7 +67,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btn_delete">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -79,10 +80,10 @@
      <string notr="true">color: rgb(255, 170, 255);</string>
     </property>
     <property name="text">
-     <string>Видалити замітку</string>
+     <string>Видалити нотатку</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btn_save">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -98,17 +99,17 @@
      <string>Зберегти замітку</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget_2">
+   <widget class="QListWidget" name="list_2">
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>340</y>
+      <y>350</y>
       <width>421</width>
-      <height>141</height>
+      <height>131</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btn_add">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -128,19 +129,20 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>290</y>
-      <width>241</width>
-      <height>51</height>
+      <y>310</y>
+      <width>421</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 0);</string>
+     <string notr="true">color: rgb(255, 255, 0);
+background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Список тегів</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="btn_search">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -156,7 +158,7 @@
      <string>Шукати замітки по тегу</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="btn_deta">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -194,8 +196,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>931</width>
-     <height>21</height>
+     <width>930</width>
+     <height>18</height>
     </rect>
    </property>
   </widget>
