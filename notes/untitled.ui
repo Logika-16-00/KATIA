@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>930</width>
-    <height>722</height>
+    <width>931</width>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,30 +44,29 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>10</y>
-      <width>421</width>
-      <height>31</height>
+      <y>0</y>
+      <width>241</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 0);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(255, 255, 0);</string>
     </property>
     <property name="text">
      <string>Список заміток</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="list_1">
+   <widget class="QListWidget" name="list1">
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>50</y>
+      <y>40</y>
       <width>421</width>
       <height>131</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_delete">
+   <widget class="QPushButton" name="bt_delete">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -80,7 +79,7 @@ background-color: rgb(255, 255, 255);</string>
      <string notr="true">color: rgb(255, 170, 255);</string>
     </property>
     <property name="text">
-     <string>Видалити нотатку</string>
+     <string>Видалити замітку</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_save">
@@ -99,13 +98,13 @@ background-color: rgb(255, 255, 255);</string>
      <string>Зберегти замітку</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="list_2">
+   <widget class="QListWidget" name="list2">
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>350</y>
+      <y>330</y>
       <width>421</width>
-      <height>131</height>
+      <height>141</height>
      </rect>
     </property>
    </widget>
@@ -129,20 +128,19 @@ background-color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>310</y>
-      <width>421</width>
-      <height>31</height>
+      <y>290</y>
+      <width>241</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 0);
-background-color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(255, 255, 0);</string>
     </property>
     <property name="text">
      <string>Список тегів</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_search">
+   <widget class="QPushButton" name="btn_detach1">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -158,7 +156,7 @@ background-color: rgb(255, 255, 255);</string>
      <string>Шукати замітки по тегу</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_deta">
+   <widget class="QPushButton" name="btn_detach">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -196,8 +194,8 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>930</width>
-     <height>18</height>
+     <width>931</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
