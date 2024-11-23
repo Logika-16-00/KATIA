@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from PyQt5.QtWidgets import QApplication,QInputDialog
 from PyQt5.QtWidgets import QMainWindow
 from notes import Ui_MainWindow
@@ -100,7 +99,6 @@ print(notes)
 app = QApplication([])
 ex = Widget()
 ex.show()
-=======
 from PyQt5.QtWidgets import QApplication,QInputDialog
 from PyQt5.QtWidgets import QMainWindow
 from notes import Ui_MainWindow
@@ -202,5 +200,4 @@ print(notes)
 app = QApplication([])
 ex = Widget()
 ex.show()
->>>>>>> 2f987dbaba9b9322df15f9f0c84b89f159629215
 app.exec_()
