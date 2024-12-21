@@ -17,7 +17,7 @@ class Widget(QMainWindow):
     def show_note(self):
         self.ui.list1.clear()
         self.ui.list2.clear()
-        self.ui.list_1.addItem(note)
+        self.ui.list_1.addItem()
         self.ui.list_1.itemClicked.connect(self.show_note)
         self.ui.btn_make.clicked.connect(self.add_note)
         self.ui.btn_save.clicked.connect(self.safe_notes)
