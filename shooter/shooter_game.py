@@ -1,7 +1,12 @@
 #Створи власний Шутер!
 
+from cProfile import label
+from logging import _Level
+from readline import replace_history_item
+from turtle import speed
 from pygame import *
 from random import *
+from time import time as timer
 
 wn =  display.set_mode((700,500))
 display.set_caption("Shooter")
@@ -22,8 +27,7 @@ font2 = font.Font(None,30)
 lose =  0
 catch = 0
 label_lose = font1.render(f"Пропущено {lose}", True, (190,5,9))
-label_catch = font1.render(f"Збито {lose}", True, (13,193,11))
-
+label_catch = font1.render(f"Збито {lose}", True, (13,193,11)
 class Player(sprite.Sprite):
     def __init__(self, image_player,x,y,size_x,size_y,life,speed):
         super().__init__()
@@ -79,6 +83,9 @@ asteroids = sprite.Group()
 for i in range(5):
     asteroid = Enemy("asteroid.png", randint(0,650), 0,50,50,randint(1,5),randint(1,5))
     asteroids.add(asteroid)
+level_boss = 0
+boss =  Enemy("boss_anemy.png",30,40,80,100,50,5)
+
 while game:
     for e in event.get():
         if e.type == QUIT:
@@ -87,6 +94,26 @@ while game:
             if e.key == K_SPACE:
                 fire_sound.play()
                 rocket.fire()
+num_fire = 0
+rel_time = False
+while game:
+    for e in event.get():
+        if e.type == QUIT:
+            game = 0
+        elif e.type == KEYDOWN:
+            if e.key == K_SPACE:
+                if num_fire <= 6 and rel_time == False:
+                rocket.fire()
+                num_fire += 1
+
+            elif num_fire >=6 and rel_time == False:
+    if rel_time:
+    if timer() - rel_time >3:
+    rel_time = False
+    num_fire = 0
+    time_to_fire - int(3 - timer() - rel_time)
+    label_rel = font1.render(f"Почекай ше{time_to_fire}",True,(44,44,44))
+    wn.blit(label_rel, (300,15))     
 
     if not finish:
         label_lose = font1.render(f"Пропущено {lose}", True, (190,5,9))
@@ -120,13 +147,38 @@ while game:
             label_lose = font2.render("Кінець гри", True,(193,17,11))
             wn.blit(fon, (0,0))
             wn.blit(label_lose, (190,200))
-        if catch >= 10:
+        if catch >= 1:
             finish = True
             level_boss = True
-        if level_boss:
-            wn.blit(fon, (0,0))
-            rocket.move()
-            rocket.show
+
+
+        
+
+    elif level_boss:
+        wn.blit(fon,(0,0))
+        label_boss_live = font1.render(f"Життя боcса: {boss.life}",True,(13,197,111))
+        wn.blit(label_boss_live,(10,10))
+        label_live = font1.render(f"Життя: {rocket.life}",True,(13,197,111))
+        wn.blit(label_live,(10,50))
+        rocket.move()
+        rocket.show()
+        bullets.draw(wn)
+        bullets.update()
+        boss.show()
+        boss.rect.x += boss.speed
+        if boss.rect.x < 0 or boss.rect.x > 600:
+            boss.speed *= -1
+        if sprite.spritecollide(boss,bullets,True):
+            boss.life -= 1
+                
+        if boss.life <= 0:
+            level_boss = False
+            label_lose= font2.render("ПеРЕмОгА",True,(13,197,11))
+            wn.blit(label_lose,(190,200))
+            boss.life = 0
+    
+            
+
 
     display.update()
     clock.tick(fps)
