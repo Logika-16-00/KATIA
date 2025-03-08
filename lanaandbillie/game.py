@@ -46,7 +46,7 @@ class Player(sprite.Sprite):
     
     def show(self):
         wn.blit(self.image,(self.rect.x,self.rect.y))
-        draw.rect(wn, (255, 0, 0), self.rect, 2)
+        # draw.rect(wn, (255, 0, 0), self.rect, 2)
 
     def move1(self):
         keys = key.get_pressed()
@@ -74,7 +74,7 @@ game = 1
 lanas = Player("Lana1.png", -400,-800,70,90,0,10)
 billies = Player("billie1.png",170,100,80,100,0,10)
 billie2 = Player("billie2.png", 240,100,90,100,5,10)
-lana2 = Player("Lana2.png",310,100,90,100,5,10)
+lana2 =  Player("Lana2.png",310,100,90,100,3,10)
 maslo = Player("maslo.png",305,350,50,70,0,10)
 beyonces = Player("beyonce.png",randint(0,400),350,120,140,0,5)
 play = Player("cnopkastart.png",randint(0,395),randint(0,150),300,190,0,10)
@@ -143,7 +143,7 @@ while game:
                 finish = 1
                 game_over = 1
                 
-            if timer() - start_level1 > 10:
+            if timer() - start_level1 > 5:
                 level_1 = 0
                 level_2 = 1
                 start_level2 = timer()
@@ -174,10 +174,10 @@ while game:
                 lana2.life -= 1
                 
             if lana2.life <= 0:
-                game_win = 1
+                game_over = 1
                 finish = 1
             
-            if timer() - start_level2 > 3:
+            if timer() - start_level2 > 10:
                 finish = 1
                 game_win = 1
             
